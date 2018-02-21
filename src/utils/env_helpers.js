@@ -1,16 +1,16 @@
 function beRoot() {
-  if (process.env.NODE_ENV === 'development') {
-    return process.env.REACT_APP_BE_ROOT
-  } else if (process.env.NODE_ENV === 'kube') {
-    return process.env.KUBERNETES_SERVICE_HOST
+  if (process.env.IN_CLUSTER) {
+    return "http://192.168.99.100"
+  } else if (process.env.NODE_ENV === 'development') {
+    return "http://localhost"
   }
 }
 
 function bePort() {
-  if (process.env.NODE_ENV === 'development') {
-    return process.env.REACT_APP_BE_PORT
-  } else if (process.env.NODE_ENV === 'kube') {
-    return 8080
+  if (process.env.IN_CLUSTER) {
+    return "30003"
+  } else if (process.env.NODE_ENV === 'development') {
+    return "8080"
   }
 }
 
