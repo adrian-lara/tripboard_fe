@@ -1,13 +1,71 @@
 import React, { Component } from 'react'
 import '../stylesheets/SearchBar.css'
 
+import SearchResult from './SearchResult'
+import { beRoot, bePort } from '../utils/env_helpers'
+import handleResponse from '../utils/handle-response'
+
 class SearchBar extends Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      q: "",
+      searchResults: [],
+    }
+  }
+
+  checkForSubmit(event) {
+    if (event.key === "Enter") this.sendSearchReq(event)
+  }
+
+  changeQ(event) {
+    this.setState({q: event.target.value})
+  }
+
+  sendSearchReq(event) {
+    event.preventDefault()
+    fetch(`${beRoot()}:${bePort()}/api/v1/search-places?q=${this.state.q}`)
+      .then(response => handleResponse(response))
+      .then(searchResults => this.updateSearchResults(searchResults))
+      .catch(error => console.error({ error }))
+  }
+
+  updateSearchResults(searchResults) {
+    this.setState({ searchResults: searchResults })
+  }
+
+  createSearchResult(searchResult) {
+    return (
+      <SearchResult
+       key={searchResult.place_id}
+       result={searchResult}/>
+    )
+  }
+
   render() {
+    let searchResults = []
+
+    if (this.state.searchResults.length > 0) {
+      searchResults = this.state.searchResults.map(this.createSearchResult)
+    } else {
+      searchResults = []
+    }
+
     return (
       <div className="SearchBar">
         <form id="search-form">
-          <input type="text" id="search-input" placeholder="Start Trippin'"></input>
+          <input
+            type="text"
+            id="search-input"
+            placeholder="Start Trippin'"
+            onChange={this.changeQ.bind(this)}
+            onKeyUp={this.checkForSubmit.bind(this)}></input>
+          <input
+            type="submit"
+            value="Search"
+            onClick={this.sendSearchReq.bind(this)}></input>
         </form>
+        { searchResults }
       </div>
     )
   }
