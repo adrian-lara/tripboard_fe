@@ -1,7 +1,7 @@
 import React, {Component} from 'react'
 
 import BasicInfo from './BasicInfo'
-
+import YelpInfo from './YelpInfo'
 
 class PlaceInfo extends Component {
   constructor(props) {
@@ -19,6 +19,8 @@ class PlaceInfo extends Component {
     return(
       <div className="PlaceInfo">
         <BasicInfo
+         basicInfo={this.state.basicInfo}/>
+        <YelpInfo
          basicInfo={this.state.basicInfo}/>
       </div>
     )
