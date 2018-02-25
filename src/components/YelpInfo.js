@@ -26,12 +26,15 @@ class YelpInfo extends Component {
   }
 
   updateBasicInfo = (newProps) => {
-    this.setState({
-      name: newProps.basicInfo.name,
-      phone: newProps.basicInfo.int_phone_number,
-      latitude: newProps.basicInfo.latitude,
-      longitude: newProps.basicInfo.longitude,
-    })
+    this.setState(
+      {
+        name: newProps.basicInfo.name,
+        phone: newProps.basicInfo.int_phone_number,
+        latitude: newProps.basicInfo.latitude,
+        longitude: newProps.basicInfo.longitude,
+      },
+      () => this.getYelpInfo()
+    )
   }
 
   getYelpInfo = () => {
@@ -47,10 +50,6 @@ class YelpInfo extends Component {
 
   componentWillReceiveProps(newProps) {
     this.updateBasicInfo(newProps)
-  }
-
-  componentDidUpdate() {
-    this.getYelpInfo()
   }
 
   render() {
