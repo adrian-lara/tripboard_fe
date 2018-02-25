@@ -6,13 +6,18 @@ class SearchResult extends Component {
     this.state = {
       name: props.result.name,
       address: props.result.address,
-      key: props.result.key,
-    }
+      place_id: props.result.place_id
+      }
+  }
+
+  getInfo = () => {
+    return this.props.getInfo(this.state.place_id)
   }
 
   render() {
     return (
-      <div className="search-result">
+      <div className="search-result"
+       onClick={this.getInfo}>
         <div className="search-result-name">{ this.state.name }</div>
         <div className="search-result-address">{ this.state.address }</div>
       </div>
