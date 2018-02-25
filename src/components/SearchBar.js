@@ -26,19 +26,16 @@ class SearchBar extends Component {
     event.preventDefault()
     fetch(`${beRoot()}:${bePort()}/api/v1/search-places?q=${this.state.q}`)
       .then(response => handleResponse(response))
-      .then(searchResults => this.updateSearchResults(searchResults))
+      .then(searchResults => this.setState({ searchResults: searchResults }))
       .catch(error => console.error({ error }))
   }
 
-  updateSearchResults(searchResults) {
-    this.setState({ searchResults: searchResults })
-  }
-
-  createSearchResult(searchResult) {
+  createSearchResult = (searchResult) => {
     return (
       <SearchResult
        key={searchResult.place_id}
-       result={searchResult}/>
+       result={searchResult}
+       getInfo={this.props.getInfo}/>
     )
   }
 
