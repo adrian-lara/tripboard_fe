@@ -4,12 +4,14 @@ import '../stylesheets/BasicInfo.css';
 import HourEntry from './HourEntry'
 
 const renderHours = (hours) => {
-  return hours.map((hour) => {
-    return (
-      <HourEntry
-       hour={hour}/>
-    )
-  })
+  if (hours) {
+    return hours.map((hour) => {
+      return (
+        <HourEntry
+        hour={hour}/>
+      )
+    })
+  }
 }
 
 const BasicInfo = (props) => {
