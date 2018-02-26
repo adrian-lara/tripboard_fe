@@ -1,4 +1,5 @@
 import React, {Component} from 'react'
+import '../stylesheets/PlaceInfo.css';
 
 import BasicInfo from './BasicInfo'
 import YelpInfo from './YelpInfo'
