@@ -1,4 +1,5 @@
 import React, {Component} from 'react'
+import '../stylesheets/YelpInfo.css';
 
 import { beRoot, bePort } from '../utils/env_helpers'
 import handleResponse from '../utils/handle-response'
@@ -55,9 +56,10 @@ class YelpInfo extends Component {
   render() {
     return(
       <div className="yelp-info">
-        <div className="yelp-info-name">{ this.state.rating }</div>
-        <div className="yelp-info-address">{ this.state.review_count }</div>
-        <div className="yelp-info-hours">{ this.state.yelp_url }</div>
+        <a className="yelp-title"
+         href={ this.state.yelp_url }>Yelp</a>
+        <div className="yelp-info-rating">Rating: { this.state.rating }/5</div>
+        <div className="yelp-info-count">Review Count: { this.state.review_count }</div>
       </div>
     )
   }
