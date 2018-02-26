@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import '../stylesheets/App.css';
 
 import Title from './Title'
-import Welcome from './Welcome'
 import SearchBar from './SearchBar'
 import PlaceInfo from './PlaceInfo'
 
@@ -37,7 +36,6 @@ class App extends Component {
     return (
       <div className="App">
         <Title/>
-        <Welcome/>
         <SearchBar
          getInfo={this.getInfo}/>
         { this.displayInfo() }
