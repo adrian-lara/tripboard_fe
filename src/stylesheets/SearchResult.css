@@ -1,0 +1,32 @@
+.search-result {
+  display: flex;
+  width: 70%;
+  justify-content: space-between;
+  align-items: center;
+  margin: auto;
+
+  border-radius: 4px;
+  margin-bottom: 1px;
+  box-shadow: var(--search-shadow-style);
+}
+
+.search-result:hover {
+  cursor: pointer;
+  box-shadow: var(--search-shadow-hover);
+}
+
+.search-result-name {
+  display: inline-flex;
+  align-self: flex-start;
+
+  margin: 8px;
+}
+
+.search-result-address {
+  display: inline-flex;
+  align-self: flex-end;
+
+  margin: 8px;
+  font-size: 12px;
+  opacity: .5;
+}

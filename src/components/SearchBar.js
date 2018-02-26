@@ -59,6 +59,7 @@ class SearchBar extends Component {
             onKeyUp={this.checkForSubmit.bind(this)}></input>
           <input
             type="submit"
+            id="search-button"
             value="Search"
             onClick={this.sendSearchReq.bind(this)}></input>
         </form>

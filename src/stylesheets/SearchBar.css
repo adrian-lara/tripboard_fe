@@ -1,24 +1,35 @@
-:root {
-  --search-shadow-colour: #d3d3d3;
-}
-
 .SearchBar {
-  margin: 50px;
+  margin: 25px;
 }
 
 #search-input {
-  width: 80%;
+  display: flex;
+
+  font-size: 14px;
+
+  width: 85%;
   height: 30px;
+  margin: auto;
 
   border-style: none;
-  box-shadow: 0px 1px 6px var(--search-shadow-colour);
+  box-shadow: var(--search-shadow-style);
 }
 
 #search-input:hover {
-  box-shadow: 0px 1px 6px 1.5px var(--search-shadow-colour);
+  box-shadow: var(--search-shadow-hover);
 }
 
 #search-input:focus {
   outline: none;
   box-shadow: 0px 1px 6px 3px var(--search-shadow-colour);
+}
+
+#search-button {
+  margin: 10px;
+  box-shadow: var(--search-shadow-style);
+}
+
+#search-button:hover {
+  cursor: pointer;
+  box-shadow: var(--search-shadow-hover);
 }
