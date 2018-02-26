@@ -1,5 +1,22 @@
+:root {
+  --search-shadow-colour: #d3d3d3;
+  --search-shadow-style: 0px 1px 6px var(--search-shadow-colour);
+  --search-shadow-hover: 0px 1px 6px 1.5px var(--search-shadow-colour);
+}
+
+p {
+  margin: 3px;
+}
+
+a {
+  color: inherit;
+}
+
 .App {
   text-align: center;
+  margin: 25px;
+  padding-left: 100px;
+  padding-right: 100px;
 }
 
 .App-logo {
