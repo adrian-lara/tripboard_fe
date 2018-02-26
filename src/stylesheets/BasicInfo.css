@@ -1,0 +1,32 @@
+.basic-info {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+
+  width: 25%;
+  margin: 5px;
+  padding: 5px;
+  box-shadow: var(--search-shadow-style);
+}
+
+.basic-info-name {
+  margin: 5px;
+  font-size: 18px;
+}
+
+.basic-info-address {
+  opacity: .5;
+}
+
+.basic-info-phone {
+  margin: 4px;
+}
+
+.basic-info-hours {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 4px;
+  align-items: flex-end;
+}
