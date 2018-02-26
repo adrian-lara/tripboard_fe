@@ -56,12 +56,12 @@ class TypicalWeather extends Component {
   render() {
     return(
       <div className="typical-weather">
-        <div className="typical-weather-avgHigh">{ this.state.avgHigh }</div>
-        <div className="typical-weather-avgLow">{ this.state.avgLow }</div>
-        <div className="typical-weather-avgPrecip">{ this.state.avgPrecip }</div>
-        <div className="typical-weather-chanceWindy">{ this.state.chanceWindy }</div>
-        <div className="typical-weather-chanceHumid">{ this.state.chanceHumid }</div>
-        <div className="typical-weather-chanceCloudy">{ this.state.chanceCloudy }</div>
+        <div className="typical-weather-avgHigh">Avg. High: { this.state.avgHigh }F</div>
+        <div className="typical-weather-avgLow">Avg. Low: { this.state.avgLow }F</div>
+        <div className="typical-weather-avgPrecip">Avg. Precip: { this.state.avgPrecip }in.</div>
+        <div className="typical-weather-chanceWindy">Windy Chance: { this.state.chanceWindy }%</div>
+        <div className="typical-weather-chanceHumid">Humid Chance: { this.state.chanceHumid }%</div>
+        <div className="typical-weather-chanceCloudy">Cloudy Chance: { this.state.chanceCloudy }%</div>
       </div>
     )
   }

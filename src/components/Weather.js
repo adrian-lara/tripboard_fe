@@ -1,4 +1,5 @@
 import React, {Component} from 'react'
+import '../stylesheets/Weather.css';
 
 import TypicalWeather from './TypicalWeather'
 
@@ -53,15 +54,19 @@ class Weather extends Component {
 
   render() {
     return (
-      <div>
-        <input
-         id="begin-date"
-         type="date"
-         onChange={this.updateDate.bind(this, "beginDate")}></input>
-        <input
-         id="end-date"
-         type="date"
-         onChange={this.updateDate.bind(this, "endDate")}></input>
+      <div className="Weather">
+        <p className="weather-title">Weather</p>
+        <p className="dates-label">Choose dates: (must be under 30 days apart)</p>
+        <div className="dates">
+          <input
+           className="date-input"
+           type="date"
+           onChange={this.updateDate.bind(this, "beginDate")}></input>-
+          <input
+           className="date-input"
+           type="date"
+           onChange={this.updateDate.bind(this, "endDate")}></input>
+        </div>
          { this.displayTypicalWeather() }
       </div>
     )

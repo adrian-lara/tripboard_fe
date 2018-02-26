@@ -1,0 +1,35 @@
+.Weather {
+  display: inline-flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-content: space-around;
+
+  width: 25%;
+  margin: 5px;
+  padding: 5px;
+  box-shadow: var(--search-shadow-style);
+}
+
+.weather-title {
+  margin: 5px;
+  font-size: 18px;
+}
+
+.dates-label {
+  font-size: 12px;
+  opacity: .5;
+}
+
+.date-input {
+  margin: 5px;
+  width: 30%;
+  height: 25px;
+}
+
+.typical-weather {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 4px;
+  align-items: center;
+}
