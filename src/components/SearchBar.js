@@ -54,7 +54,7 @@ class SearchBar extends Component {
           <input
             type="text"
             id="search-input"
-            placeholder="Start Trippin'"
+            placeholder="Find your place...  (ex. Cheesesteaks Philadelphia, San Francisco Bike Tours)"
             onChange={this.changeQ.bind(this)}
             onKeyUp={this.checkForSubmit.bind(this)}></input>
           <input
