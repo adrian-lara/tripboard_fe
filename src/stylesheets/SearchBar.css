@@ -33,3 +33,10 @@
   cursor: pointer;
   box-shadow: var(--search-shadow-hover);
 }
+
+#search-results-title {
+  margin: 20px;
+  margin-top: 40px;
+  font-size: 18px;
+  text-decoration: underline;
+}

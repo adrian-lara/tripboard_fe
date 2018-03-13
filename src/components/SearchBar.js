@@ -41,9 +41,15 @@ class SearchBar extends Component {
 
   render() {
     let searchResults = []
+    let searchResultsTitle = ""
 
     if (this.state.searchResults.length > 0) {
       searchResults = this.state.searchResults.map(this.createSearchResult)
+      searchResultsTitle = (
+        <div id="search-results-title">
+          Search Results
+        </div>
+      )
     } else {
       searchResults = []
     }
@@ -63,6 +69,7 @@ class SearchBar extends Component {
             value="Search"
             onClick={this.sendSearchReq.bind(this)}></input>
         </form>
+        { searchResultsTitle }
         { searchResults }
       </div>
     )
