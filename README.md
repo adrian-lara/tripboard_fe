@@ -3,6 +3,8 @@
 
 Tripboard helps users plan trips.  A user searches for a place of interest by entering either a name or type of interest as well as a geographic location (for example, Cheesesteaks Philadelphia, San Francisco Bike Tours, or Little Man Ice Cream Denver).  Clicking on any of the search results brings up information that users might want to consider when planning to visit that place. Within the 'Weather' card, a user can also enter potential days that the trip might take place, and the average weather will appear for that day.
 
+![alt text](https://github.com/adrian-lara/tripboard_fe/blob/master/src/Tripboard_SS_20180307.png "test")
+
 ### Technical Details
 
 **This is the frontend repository for this application. The backend repository can be found [here](https://github.com/adrian-lara/tripboard_be).**
